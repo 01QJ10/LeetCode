@@ -1,0 +1,17 @@
+Initialise:
+	-length of input string n
+	-start and end pointer as 0
+	-maxLen as 0
+	-a HashSet to store unique chars
+
+while end < n:
+	initialise curr as the current character in the string
+	if unique does not contain curr:
+		-add curr into unique
+		-update maxLen as max(maxLen, end-start+1)
+		-end ++
+	else:
+		-remove charAt(start) in unique
+		-start ++
+
+return maxLen

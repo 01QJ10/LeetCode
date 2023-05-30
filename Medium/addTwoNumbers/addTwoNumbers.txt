@@ -1,0 +1,26 @@
+Initialise:
+	-p as head of l1
+	-q as head of l2
+	-dummy as head of new LL
+	-curr as pointer, pointing to dummy
+	-int temp = 0
+
+while p or q are not null:
+	if p is not null:
+		x = p.val, else x = 0
+	if q is not null:
+		y = q.val, else y = 0
+
+	sum = temp + x + y
+	temp = sum/ 10 //if the sum > 10, the value will be added to next node as temp
+	curr.next is a new list node of value sum%10
+	move curr pointer to curr.next
+	if p is not null:
+		p points to p.next
+	same for q
+
+if temp > 0 //i.e. if the summation results in one more digit
+	curr.next is a new list node of value temp
+
+return dummy.next
+	

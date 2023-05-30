@@ -1,0 +1,7 @@
+1. get rid of leading white space using .trim()
+2. if len == 0 return 0
+3. check + - sign (if there is "+-", return 0)
+4. check whether the c is digit:
+	use start and end as the indices of the digit part of the string
+	if after leading spaces and one "+-" there is no digit, return 0
+5. check the digit to be within the boundaries

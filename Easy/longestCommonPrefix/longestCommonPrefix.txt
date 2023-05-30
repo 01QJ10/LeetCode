@@ -1,0 +1,13 @@
+Edge cases:
+#1 empty array: return empty string
+#2 array with only 1 string: return the string
+
+Then define a boolean isCommonPrefix function, which takes in the str array and and int:
+	- define a prefix, which is the substring of the first string in the array
+	- if every string in the array matches the prefix, return true, false if otherwise
+
+Use binary search:
+	- find the length of the shortest string in the array
+	- low = 0, high = min length
+	- while low <= high, mid = (low + high) /2
+	- if isCommonPrefix, low = mid + 1, high = mid -1 if otherwise

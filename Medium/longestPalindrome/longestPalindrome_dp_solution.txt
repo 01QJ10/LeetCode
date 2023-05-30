@@ -1,0 +1,15 @@
+Initialise a boolean table
+
+// When palindrom is a substring of length 1
+set table[i][i] to true
+
+// When palindrome is a substring of length 2
+set table[i][i+1] to true
+
+// When palindrome is a substring of length >= 3
+initialise an end pointer j, such that it points to the end of the current substring
+if char at i == chat at j AND table[i + 1][j - 1] is true, set table[i][j] to true
+then the length of the current substring k is said to be the current max length
+if k is larger than max length, assign k to a start variable, and update max length
+
+return substring(start, start + max length)
