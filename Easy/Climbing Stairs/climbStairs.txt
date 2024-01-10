@@ -1,0 +1,17 @@
+If we list the solution for the first few cases, it is easy to notice that:
+    -n = 1: 1
+    -n = 2: 2
+    -n = 3: 3
+    -n = 4: 5
+    -n = 5: 8
+The base cases are n = 1, and n = 2, and every subsequent n would be the sum of the previous two.
+The recursive solution would be easy to see, i.e.:
+    def recursive(n):
+        if n == 1:
+            return 1
+        if n == 2:
+            return 2
+        return recursive(n - 1) + recursive(n - 2)
+However, the time limit is exceeded for this solution. Hence, we can simply change this to an iterative solution.
+To achieve that, we still need the base case n = 1, and set two variables prev and curr to 1 outside the for loop, 
+and a variable temp inside the loop, to keep track of the current value and the previous value.

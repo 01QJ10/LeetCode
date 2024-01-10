@@ -1,0 +1,13 @@
+The objective is to check whether the leaves of two trees form the same array,
+hence a simple DFS algorithm will do:
+    def dfs:
+        if (stopping condition):
+            return
+        dfs(root.left)
+        dfs(root.right)
+
+The stopping conditions would be these two:
+    - check whether the current node is a leaf
+    - stop if not a root
+
+Then, we just have to define a list in the dfs(), and add the value of the node if it is a leaf.
