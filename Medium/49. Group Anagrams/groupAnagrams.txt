@@ -1,0 +1,11 @@
+The idea is to store the unique groups of characters as keys, and the respective indices with the 
+group of characters as values. Since set cannot be stored as key as it is unhashable, we can 
+sort each group of characters and store them in tuples, so that the order of the characters
+will not matter.
+
+For strs of length n and characters of length m, this will take O(n) + O(m log m), whichever larger will 
+dominate.
+
+As the indices were stored as lists, now we just have to use for loops to extract them out and put them
+in the desired form, which will also take O(n).
+

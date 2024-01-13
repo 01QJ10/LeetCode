@@ -1,0 +1,7 @@
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the 
+array such that nums[i] == nums[j] and abs(i - j) <= k.
+
+The idea is to only pass the array ONCE. We can use a hashmap, such that it stores the elements as keys,
+and the indices as values, e.g. nums = [5, 6, 7, 8]
+    {5: 0, 6: 1, 7: 2, 8: 3}
+Then, check whether the element of the current iterate is in the map AND if abs(i - j) <= k.
